@@ -30,8 +30,8 @@ public class WebSecurityConfigurerImpl extends WebSecurityConfigurerAdapter {
                 .mvcMatchers("/actuator/shutdown").permitAll()
                 .anyRequest().authenticated()
                 .and()
-                .csrf().disable() // disabling CSRF will allow sending POST request using Postman
-                .httpBasic(); // enables basic auth.
+                .csrf().disable()
+                .httpBasic();
     }
 
     @Bean
